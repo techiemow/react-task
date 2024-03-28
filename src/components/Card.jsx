@@ -5,7 +5,7 @@ const Card = ({ datas }) => {
     <div className="cards d-flex flex-wrap">
       {datas.map(data => (
         <div className="card mb-4" style={{ width: '18rem' }} key={data.id}>
-          <img src={data.img} className="card-img-top" alt="..." style={{ height: '200px', objectFit: 'cover' }} />
+          <img src={data.img} className="card-img-top" alt="..." style={{ height: '200px', width:"288px" }} />
           <div className="card-body">
             <h5 className="card-title">{data.topic}</h5>
             <br/>
