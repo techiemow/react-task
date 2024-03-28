@@ -1,0 +1,10 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .card {
+    margin: 0px 45px; /* Add margin to separate cards */
+    width: 250px; /* Set a fixed width for each card */
+  }

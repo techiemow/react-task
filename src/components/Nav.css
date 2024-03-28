@@ -1,0 +1,43 @@
+.container {
+    padding-top: 100px; /* Adjust the value based on the height of your navigation bar */
+    position: relative; /* Ensure relative positioning for the padding to work */
+  }
+  
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Add a background color if needed */
+    z-index: 1000; /* Set a high z-index to ensure it's above other content */
+    border: 1px solid black; /* Add a border if needed */
+    box-shadow: 2px 2px 10px 5px gray;
+  }
+  
+  
+  .courses {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin: px; /* Remove default margin */
+    padding: 10px; /* Add padding as needed */
+  }
+  
+  .courses li {
+    margin-right: 20px; /* Adjust spacing between navigation items */
+    justify-content: space-evenly;
+  }
+  
+  .courses li a {
+    color: black;
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .courses li:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 3px 5px 5px rgb(96, 241, 96);
+  }
+  
