@@ -1,0 +1,13 @@
+.cart{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 60px; /* Adjust according to the button height */
+  }
+  
