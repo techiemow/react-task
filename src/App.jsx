@@ -15,8 +15,10 @@ const App = () => {
 
   return (
     <div>
+      <div className='Headings'>
       <h1 className='text-center'>Shopping Cart
       <div className='text-center cart'>Total Quantity: {totalQuantity} , Total Amount: ${totalAmount}</div></h1>
+      </div>
       <div className="cards-container">
       <ProductDetailsContext.Provider value={productData.products}>
         <ProductCard updateTotal={updateTotal} />
