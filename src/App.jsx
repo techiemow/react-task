@@ -13,6 +13,14 @@ const App = () => {
     setTotalAmount(amount);
   };
 
+    const confirmButton = () => {
+    if (totalQuantity > 0) {
+      confirm(`The customer purchased ${totalQuantity} items for a total amount of $${totalAmount}. Proceed to pay?`);
+    } else {
+      alert("Please add items to the cart before proceeding to pay.");
+    }
+  };
+  
   return (
     <div>
       <h1 className='text-center'>Shopping Cart
