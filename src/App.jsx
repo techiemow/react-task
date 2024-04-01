@@ -13,11 +13,20 @@ const App = () => {
     setTotalAmount(amount);
   };
 
+  const confirmButton = () => {
+    if (totalQuantity > 0) {
+      confirm(`The customer purchased ${totalQuantity} items for a total amount of $${totalAmount}. Proceed to pay?`);
+    } else {
+      alert("Please add items to the cart before proceeding to pay.");
+    }
+  };
+
   return (
     <div>
       <div className='Headings'>
       <h1 className='text-center'>Shopping Cart
       <div className='text-center cart'>Total Quantity: {totalQuantity} , Total Amount: ${totalAmount}</div></h1>
+      <button onClick={confirmButton} className="Paybtn">Proceed To Pay</button>
       </div>
       <div className="cards-container">
       <ProductDetailsContext.Provider value={productData.products}>

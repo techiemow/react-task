@@ -42,17 +42,11 @@ const ProductCard = ({ updateTotal }) => {
     updateTotal(totalQuantity, totalAmount);
   }, [products, quantities, updateTotal]);
 
-  const confirmButton = () => {
-    if (totalQuantity > 0) {
-      confirm(`The customer purchased ${totalQuantity} items for a total amount of $${totalAmount}. Proceed to pay?`);
-    } else {
-      alert("Please add items to the cart before proceeding to pay.");
-    }
-  };
+
 
   return (
     <div className="cards">
-       <button onClick={confirmButton} className="Paybtn">Proceed To Pay</button>
+
       {products.map((product) => (
         <div className="card" style={{ width: "18rem" }} key={product.id}>
           <img src={product.images[0]} className="card-img-top" alt="..." />
@@ -93,7 +87,7 @@ const ProductCard = ({ updateTotal }) => {
           </div>
         </div>
       ))}
-
+      
     </div>
   );
 };
