@@ -1,40 +1,40 @@
-import { createContext, useState } from 'react';
-import productData from './assets/product.json';
-import ProductCard from './components/productCard';
+import React, { createContext, useEffect, useReducer } from 'react';
+import axios from 'axios';
+import { UsersReducer, initialState } from './reducer/reducer';
+import UserList from './components/UserList';
+import AddUser from './components/AddUser';
+import UserCount from "./components/Usercount"
+import './App.css'; // Import CSS for styling
 
-export const ProductDetailsContext = createContext();
+export const UserContext = createContext();
 
 const App = () => {
-  const [totalQuantity, setTotalQuantity] = useState(0);
-  const [totalAmount, setTotalAmount] = useState(0);
+  const [state, dispatch] = useReducer(UsersReducer, initialState);
 
-  const updateTotal = (quantity, amount) => {
-    setTotalQuantity(quantity);
-    setTotalAmount(amount);
-  };
-
-  const confirmButton = () => {
-    if (totalQuantity > 0) {
-      confirm(`The customer purchased ${totalQuantity} items for a total amount of $${totalAmount}. Proceed to pay?`);
-    } else {
-      alert("Please add items to the cart before proceeding to pay.");
-    }
-  };
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/users')
+      .then(response => {
+        dispatch({ type: 'USER_ALL', payload: { users: response.data } });
+      })
+      .catch(error => {
+        console.error('Error fetching users:', error);
+      });
+  }, []);
 
   return (
-    <div>
-      <div className='Headings'>
-      <h1 className='text-center'>Shopping Cart
-      <div className='text-center cart'>Total Quantity: {totalQuantity} , Total Amount: ${totalAmount}</div></h1>
-      <button onClick={confirmButton} className="Paybtn">Proceed To Pay</button>
+    <UserContext.Provider value={{ state, dispatch }}>
+    <div className="app-container">
+      <h1>User Management App</h1>
+      <div className="content-container">
+        <UserList />
+        <div className="sidebar">
+          <UserCount />
+          <AddUser />
+        </div>
       </div>
-      <div className="cards-container">
-      <ProductDetailsContext.Provider value={productData.products}>
-        <ProductCard updateTotal={updateTotal} />
-      </ProductDetailsContext.Provider>
     </div>
-    </div>
+    </UserContext.Provider>
   );
-}
+};
 
 export default App;

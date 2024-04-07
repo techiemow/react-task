@@ -1,14 +1,30 @@
-.cart{
+.app-container {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 60px; /* Adjust according to the button height */
+    align-items: center;
+    padding: 20px;
   }
   
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px;
+  }
+  
+  .sidebar {
+    width: 40%;
+  }
+  
+  /* Adjust styles as needed */
+  .user-list {
+    width: 50%;
+  }
+  
+  .add-user {
+    width: 50%;
+  }
+  
+  /* Additional styles as needed */
   
