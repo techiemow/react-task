@@ -16,3 +16,5 @@
 - The user data should be stored in a mock API that can be accessed using Axios fetch.
 
 - The UI should have a clean and responsive design that is easy to use and navigate.
+
+**Deployed URL:** https://useraxios.netlify.app/
