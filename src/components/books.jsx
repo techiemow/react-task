@@ -62,8 +62,8 @@ const Books = () => {
       <div className="books" style={{ color: 'steelblue' }}>
         <h2>List of Books</h2>
         <ul>
-          {books.map((book) => (
-            <li key={book.id}>
+          {books.map((book,index) => (
+            <li key={index}>
               <strong>Title:</strong> {book.title}<br />
               <strong>Author:</strong> {book.author}<br />
               <strong>ISBN:</strong> {book.ISBN}<br />
@@ -109,8 +109,8 @@ const Books = () => {
                 <Field type="text" className="form-control" id="publication_date" name="publication_date" />
                 <ErrorMessage name="publication_date" component="div" className="text-danger" />
               </div>
-              <button type="submit" className="btn btn-primary">Update</button>
-              <button type="button" className="btn btn-secondary" onClick={() => setShowEditForm(false)}>Cancel</button>
+              <button type="submit" className="btn btn-primary mx-1">Update</button>
+              <button type="button" className="btn btn-secondary mx-2" onClick={() => setShowEditForm(false)}>Cancel</button>
             </Form>
           </Formik>
         </div>

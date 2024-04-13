@@ -100,8 +100,8 @@ const Author = () => {
                 <Field as="textarea" className="form-control" id="biography" name="biography" />
                 <ErrorMessage name="biography" component="div" className="text-danger" />
               </div>
-              <button type="submit" className="btn btn-primary">Update</button>
-              <button type="button" className="btn btn-secondary" onClick={() => setShowEditForm(false)}>Cancel</button>
+              <button type="submit" className="btn btn-primary mx-1">Update</button>
+              <button type="button" className="btn btn-secondary mx-2   " onClick={() => setShowEditForm(false)}>Cancel</button>
             </Form>
           </Formik>
         </div>

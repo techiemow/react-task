@@ -2,3 +2,24 @@
  display: flex;
  justify-content: center;    
 }
+
+button {
+    /* Base styles for all buttons */
+    transition: transform 0.5s, opacity 0.5s; /* Apply transition to transform and opacity properties */
+
+    /* Default scale and opacity for buttons */
+    transform: scale(1); /* Default scale */
+    opacity: 0.8; /* Default opacity */
+}
+
+button:hover {
+    /* Styles to apply when hovering over a button */
+    transform: scale(1.2); /* Scale the button to 1.2 times its original size */
+    opacity: 1.2; /* Make the button fully opaque on hover */
+}
+
+
+.navigation,.navbar{
+    box-shadow: 0px 3px 5px 5px gainsboro, 0px -3px 5px 5px gainsboro;
+
+}
