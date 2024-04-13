@@ -19,7 +19,7 @@ const Addauthor = () => {
     birth_date: Yup.string().required("Author's birthdate is mandatory"),
     biography: Yup.string()
       .required("Short bio is mandatory")
-      .min(70, "Biography should be at least 70 characters")
+      .min(40, "Biography should be at least 70 characters")
   });
 
   const handleAddAuthor = async (values, { resetForm }) => {
@@ -80,7 +80,7 @@ const Addauthor = () => {
                   id="biography"
                   name="biography"
                   placeholder="Give a short bio about the author (at least 70 characters)"
-                  rows="5" // Adjust the number of rows for the textarea
+                  rows="5"
                 />
                 <ErrorMessage
                   name="biography"
