@@ -4,7 +4,7 @@
 **Objective:**
 -  Create an admin dashboard for a library management system that allows users to manage book and author details.
 - Use Formik for all form validations.  
-- Yup is also used to completed the task.
+- Yup is also used to completed the task by passing validations.
 
 **Requirements:**
 - Users should be able to add, edit, and delete book records. Each book record should contain the title, author, ISBN number, and publication date.   
