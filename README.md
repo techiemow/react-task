@@ -10,7 +10,8 @@ Total quantity and total amount
 ### Requirements
 - It needs to increase or decrease the per unit quantity, which should automatically update the total Quantity and Amount.
 
-- Code Must Use Only ContextAPI  to perform all necessary functions.  
+- Code Must Use Only React Redux Toolkit to perform all necessary functions.  
+     
      
 
 
