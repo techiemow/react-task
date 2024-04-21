@@ -8,18 +8,17 @@ const ProductCard = ({ product }) => {
 
   const dispatch = useDispatch();
 
-  const handleIncrease = () => {
+  const Increasequantity = () => {
     dispatch(increaseQuantity({ productId: product.id }));
   };
 
-  const handleDecrease = () => {
+  const DecreaseQuantity = () => {
     dispatch(decreaseQuantity({ productId: product.id }));
   };
 
   return (
     <div className="cards">
-
-        <div className="card" style={{ width: "18rem" }} key={product.id}>
+      <div className="card" style={{ width: "18rem" }} key={product.id}>
           <img src={product.images[0]} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{product.title}</h5>
@@ -36,7 +35,7 @@ const ProductCard = ({ product }) => {
           <div className="priceAndButton">
             <button
               className="btn increment"
-              onClick={handleIncrease}
+              onClick={Increasequantity}
             >
               +
             </button>
@@ -50,7 +49,7 @@ const ProductCard = ({ product }) => {
             />
             <button
               className="btn decrement"
-              onClick={handleDecrease}
+              onClick={DecreaseQuantity}
             >
               -
             </button>

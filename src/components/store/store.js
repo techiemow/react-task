@@ -103,7 +103,7 @@ const initialState = {
   totalAmount: 0
 };
 
-const productSlice = createSlice({
+const CartSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
@@ -124,14 +124,15 @@ const productSlice = createSlice({
         state.totalQuantity -= 1;
         state.totalAmount -= product.price;
       }
-    }
+    },
+    
   }
 });
 
-export const { increaseQuantity, decreaseQuantity } = productSlice.actions;
+export const { increaseQuantity, decreaseQuantity } = CartSlice.actions;
 
 export default configureStore({
   reducer: {
-    products: productSlice.reducer
+    products: CartSlice.reducer
   }
 });
